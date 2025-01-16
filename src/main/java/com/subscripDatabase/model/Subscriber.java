@@ -1,6 +1,5 @@
 package com.subscripDatabase.model;
 import java.time.LocalDate;
-import java.util.concurrent.Flow;
 
 public class Subscriber {
     private int id;
@@ -14,7 +13,7 @@ public class Subscriber {
     private static int idCounter = 0;
 
     public Subscriber(String firstName, String lastName, String email, String subscriptionType, LocalDate subscriptionStartDate) {
-        this.id = ++idCounter;
+        this.id = ++idCounter; //using this to auto increment the id as a new id is created
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -22,6 +21,7 @@ public class Subscriber {
         this.subscriptionStartDate = subscriptionStartDate;
         this.isActive = true;
     }
+    //no setter function for id as it is auto incremented
     public int getId() {
         return id;
     }
